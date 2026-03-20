@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ff66b2;
+      color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin-top: 40px;
+      text-align: center;
+      position: relative;
+      padding-bottom: 200px;
+    }
+
+    .title-image {
+      max-width: 90%;
+      height: auto;
+      box-shadow: 0px 4px 18px rgba(0,0,0,0.25);
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Top 3 posters */
+    .poster-row {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: center;
+      column-gap: 80px;
+      margin-top: 60px;
+      transform: translateY(-400px);
+      position: relative;
+      z-index: 5;
+    }
+
+    .poster {
+      max-width: 470px; /* slightly smaller than 520 */
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0px 8px 30px rgba(0,0,0,0.45);
+      cursor: pointer;
+    }
+
+    /* Bottom Pharmaka */
+    .bottom-poster {
+      margin-top: 120px; /* extra spacing below top row */
+      transform: translateY(-400px);
+    }
+
+    @media (max-width: 700px) {
+      .poster-row {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        transform: translateY(-250px);
+      }
+
+      .poster {
+        max-width: 90%;
+      }
+
+      .bottom-poster {
+        margin-top: 60px;
+        transform: translateY(-250px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="filmtitle.jpg" alt="Film Title" class="title-image">
+
+    <!-- Top Row -->
+    <div class="poster-row">
+      <a href="https://www.youtube.com/watch?v=mg8MOKGUxH4" target="_blank">
+        <img src="superzeros.jpg" alt="Superzeros" class="poster">
+      </a>
+
+      <a href="https://youtu.be/9GQ9nFCIjoY" target="_blank">
+        <img src="maxdollar.jpg" alt="Max Dollar Poster" class="poster">
+      </a>
+
+      <a href="https://youtu.be/w7c8KUtqwJg" target="_blank">
+        <img src="sixposter.jpg" alt="Six Poster" class="poster">
+      </a>
+    </div>
+
+    <!-- Bottom Centered Pharmaka -->
+    <div class="bottom-poster">
+      <a href="https://youtu.be/TuGxdEprqZ8" target="_blank">
+        <img src="pharmaka.jpg" alt="Pharmaka Poster" class="poster">
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
