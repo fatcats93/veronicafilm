@@ -8,8 +8,8 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #ff66b2;
-      color: #000;
+      background-color: #000; /* changed to black */
+      color: #fff;
       font-family: Arial, sans-serif;
     }
 
@@ -20,15 +20,25 @@
       padding-bottom: 200px;
     }
 
+    /* FATCATS STUDIOS text */
+    .header-text {
+      font-size: 80px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+      text-align: center;
+    }
+
+    .subheader-text {
+      font-size: 60px;
+      font-weight: bold;
+      color: #fff;
+      margin-top: 20px;
+      text-align: center;
+    }
+
     .title-image {
-      max-width: 90%;
-      height: auto;
-      box-shadow: 0px 4px 18px rgba(0,0,0,0.25);
-      border-radius: 12px;
-      display: block;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
+      display: none; /* removed the original title image */
     }
 
     /* Top 3 posters */
@@ -80,7 +90,9 @@
 <body>
 
   <div class="container">
-    <img src="filmtitle.jpg" alt="Film Title" class="title-image">
+    <!-- FATCATS STUDIOS -->
+    <h1 class="header-text">FATCATS</h1>
+    <h2 class="subheader-text">STUDIOS</h2>
 
     <!-- Top Row -->
     <div class="poster-row">
@@ -89,18 +101,18 @@
       </a>
 
       <a href="https://youtu.be/9GQ9nFCIjoY" target="_blank">
-        <img src="maxdollar.jpg" alt="Max Dollar Poster" class="poster">
+        <img src="maxdollar.jpeg" alt="Max Dollar Poster" class="poster">
       </a>
 
       <a href="https://youtu.be/w7c8KUtqwJg" target="_blank">
-        <img src="sixposter.jpg" alt="Six Poster" class="poster">
+        <img src="sixposter.jpeg" alt="Six Poster" class="poster">
       </a>
     </div>
 
     <!-- Bottom Centered Pharmaka -->
     <div class="bottom-poster">
       <a href="https://youtu.be/TuGxdEprqZ8" target="_blank">
-        <img src="pharmaka.jpg" alt="Pharmaka Poster" class="poster">
+        <img src="pharmaka.jpeg" alt="Pharmaka Poster" class="poster">
       </a>
     </div>
 
