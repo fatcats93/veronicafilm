@@ -8,37 +8,40 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #000; /* changed to black */
+      background-color: #000; /* black background */
       color: #fff;
       font-family: Arial, sans-serif;
     }
 
     .container {
-      margin-top: 40px;
+      margin-top: 20px;
       text-align: center;
       position: relative;
       padding-bottom: 200px;
     }
 
-    /* FATCATS STUDIOS text */
+    /* HUGE FATCATS STUDIOS text */
     .header-text {
-      font-size: 80px;
+      font-size: 180px; /* huge */
       font-weight: bold;
       color: #fff;
       margin: 0;
       text-align: center;
+      line-height: 1;
     }
 
     .subheader-text {
-      font-size: 60px;
+      font-size: 140px; /* also huge */
       font-weight: bold;
       color: #fff;
-      margin-top: 20px;
+      margin: 0;
       text-align: center;
+      line-height: 1;
+      margin-bottom: 50px; /* spacing before posters */
     }
 
     .title-image {
-      display: none; /* removed the original title image */
+      display: none; /* hide original title image */
     }
 
     /* Top 3 posters */
@@ -47,14 +50,13 @@
       grid-template-columns: auto auto auto;
       justify-content: center;
       column-gap: 80px;
-      margin-top: 60px;
-      transform: translateY(-400px);
+      margin-top: 0px; /* spacing is controlled by text margin */
       position: relative;
       z-index: 5;
     }
 
     .poster {
-      max-width: 470px; /* slightly smaller than 520 */
+      max-width: 470px; 
       width: 100%;
       height: auto;
       border-radius: 14px;
@@ -64,25 +66,27 @@
 
     /* Bottom Pharmaka */
     .bottom-poster {
-      margin-top: 120px; /* extra spacing below top row */
-      transform: translateY(-400px);
+      margin-top: 60px; 
     }
 
     @media (max-width: 700px) {
+      .header-text {
+        font-size: 100px;
+      }
+      .subheader-text {
+        font-size: 80px;
+        margin-bottom: 30px;
+      }
       .poster-row {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        transform: translateY(-250px);
       }
-
       .poster {
         max-width: 90%;
       }
-
       .bottom-poster {
-        margin-top: 60px;
-        transform: translateY(-250px);
+        margin-top: 30px;
       }
     }
   </style>
@@ -90,7 +94,7 @@
 <body>
 
   <div class="container">
-    <!-- FATCATS STUDIOS -->
+    <!-- HUGE FATCATS STUDIOS -->
     <h1 class="header-text">FATCATS</h1>
     <h2 class="subheader-text">STUDIOS</h2>
 
