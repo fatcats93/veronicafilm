@@ -44,7 +44,7 @@
       display: none; /* hide original title image */
     }
 
-    /* Top 3 posters */
+    /* Poster rows */
     .poster-row {
       display: grid;
       grid-template-columns: auto auto auto;
@@ -64,9 +64,13 @@
       cursor: pointer;
     }
 
-    /* Bottom Pharmaka */
-    .bottom-poster {
-      margin-top: 60px; 
+    /* Bottom row */
+    .bottom-row {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: center;
+      column-gap: 80px;
+      margin-top: 60px;
     }
 
     @media (max-width: 700px) {
@@ -77,7 +81,7 @@
         font-size: 80px;
         margin-bottom: 30px;
       }
-      .poster-row {
+      .poster-row, .bottom-row {
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -85,7 +89,7 @@
       .poster {
         max-width: 90%;
       }
-      .bottom-poster {
+      .bottom-row {
         margin-top: 30px;
       }
     }
@@ -113,11 +117,18 @@
       </a>
     </div>
 
-    <!-- Bottom Centered Pharmaka -->
-    <div class="bottom-poster">
+    <!-- Bottom Row: Pharmaka + Rosina -->
+    <div class="bottom-row">
       <a href="https://youtu.be/TuGxdEprqZ8" target="_blank">
         <img src="pharmaka.jpeg" alt="Pharmaka Poster" class="poster">
       </a>
+
+      <a href="https://www.youtube.com/watch?v=oqQwZhliKR4" target="_blank">
+        <img src="Rosina.jpg" alt="Rosina Poster" class="poster">
+      </a>
+
+      <!-- Empty space to keep spacing even -->
+      <div></div>
     </div>
 
   </div>
