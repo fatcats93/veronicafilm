@@ -8,7 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #000; /* black background */
+      background-color: #000;
       color: #fff;
       font-family: Arial, sans-serif;
     }
@@ -20,9 +20,8 @@
       padding-bottom: 200px;
     }
 
-    /* HUGE FATCATS STUDIOS text */
     .header-text {
-      font-size: 180px; /* huge */
+      font-size: 180px;
       font-weight: bold;
       color: #fff;
       margin: 0;
@@ -31,32 +30,31 @@
     }
 
     .subheader-text {
-      font-size: 140px; /* also huge */
+      font-size: 140px;
       font-weight: bold;
       color: #fff;
       margin: 0;
       text-align: center;
       line-height: 1;
-      margin-bottom: 50px; /* spacing before posters */
+      margin-bottom: 50px;
     }
 
     .title-image {
-      display: none; /* hide original title image */
+      display: none;
     }
 
-    /* Poster rows */
     .poster-row {
       display: grid;
       grid-template-columns: auto auto auto;
       justify-content: center;
       column-gap: 80px;
-      margin-top: 0px; /* spacing is controlled by text margin */
+      margin-top: 0px;
       position: relative;
       z-index: 5;
     }
 
     .poster {
-      max-width: 470px; 
+      max-width: 470px;
       width: 100%;
       height: auto;
       border-radius: 14px;
@@ -64,7 +62,6 @@
       cursor: pointer;
     }
 
-    /* Bottom row */
     .bottom-row {
       display: grid;
       grid-template-columns: auto auto auto;
@@ -98,7 +95,6 @@
 <body>
 
   <div class="container">
-    <!-- HUGE FATCATS STUDIOS -->
     <h1 class="header-text">FATCATS</h1>
     <h2 class="subheader-text">STUDIOS</h2>
 
@@ -117,7 +113,7 @@
       </a>
     </div>
 
-    <!-- Bottom Row: Pharmaka + Rosina -->
+    <!-- Bottom Row -->
     <div class="bottom-row">
       <a href="https://youtu.be/TuGxdEprqZ8" target="_blank">
         <img src="pharmaka.jpeg" alt="Pharmaka Poster" class="poster">
@@ -127,8 +123,9 @@
         <img src="Rosina.jpg" alt="Rosina Poster" class="poster">
       </a>
 
-      <!-- Empty space to keep spacing even -->
-      <div></div>
+      <a href="#" target="_blank">
+        <img src="quaranteam.jpg" alt="Quaranteam Poster" class="poster">
+      </a>
     </div>
 
   </div>
