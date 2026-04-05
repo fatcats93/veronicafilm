@@ -16,58 +16,54 @@
     .container {
       margin-top: 20px;
       text-align: center;
-      position: relative;
       padding-bottom: 200px;
     }
 
     .header-text {
       font-size: 180px;
       font-weight: bold;
-      color: #fff;
       margin: 0;
-      text-align: center;
       line-height: 1;
     }
 
     .subheader-text {
       font-size: 140px;
       font-weight: bold;
-      color: #fff;
       margin: 0;
-      text-align: center;
-      line-height: 1;
       margin-bottom: 50px;
+      line-height: 1;
     }
 
-    .title-image {
-      display: none;
-    }
-
-    .poster-row {
+    .poster-row, .bottom-row {
       display: grid;
       grid-template-columns: auto auto auto;
       justify-content: center;
       column-gap: 80px;
-      margin-top: 0px;
-      position: relative;
-      z-index: 5;
+      margin-top: 40px;
+    }
+
+    .poster-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 470px;
     }
 
     .poster {
-      max-width: 470px;
       width: 100%;
-      height: auto;
       border-radius: 14px;
       box-shadow: 0px 8px 30px rgba(0,0,0,0.45);
       cursor: pointer;
     }
 
-    .bottom-row {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      justify-content: center;
-      column-gap: 80px;
-      margin-top: 60px;
+    .desc {
+      background-color: #fff;
+      color: #000;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      text-align: center;
     }
 
     @media (max-width: 700px) {
@@ -76,59 +72,89 @@
       }
       .subheader-text {
         font-size: 80px;
-        margin-bottom: 30px;
       }
       .poster-row, .bottom-row {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 30px;
       }
-      .poster {
+      .poster-container {
         max-width: 90%;
-      }
-      .bottom-row {
-        margin-top: 30px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1 class="header-text">FATCATS</h1>
-    <h2 class="subheader-text">STUDIOS</h2>
+<div class="container">
+  <h1 class="header-text">FATCATS</h1>
+  <h2 class="subheader-text">STUDIOS</h2>
 
-    <!-- Top Row -->
-    <div class="poster-row">
+  <!-- TOP ROW -->
+  <div class="poster-row">
+
+    <div class="poster-container">
       <a href="https://www.youtube.com/watch?v=mg8MOKGUxH4" target="_blank">
-        <img src="superzeros.jpeg" alt="Superzeros" class="poster">
+        <img src="superzeros.jpeg" class="poster">
       </a>
-
-      <a href="https://youtu.be/9GQ9nFCIjoY" target="_blank">
-        <img src="maxdollar.jpeg" alt="Max Dollar Poster" class="poster">
-      </a>
-
-      <a href="https://youtu.be/w7c8KUtqwJg" target="_blank">
-        <img src="sixposter.jpeg" alt="Six Poster" class="poster">
-      </a>
+      <div class="desc">
+        Superzeros (2025): Made with NYFA — two boys determined to be superheroes
+      </div>
     </div>
 
-    <!-- Bottom Row -->
-    <div class="bottom-row">
-      <a href="https://youtu.be/TuGxdEprqZ8" target="_blank">
-        <img src="pharmaka.jpeg" alt="Pharmaka Poster" class="poster">
+    <div class="poster-container">
+      <a href="https://youtu.be/9GQ9nFCIjoY" target="_blank">
+        <img src="maxdollar.jpeg" class="poster">
       </a>
+      <div class="desc">
+        A Day in the Life of a Millionaire (2024): a bored kid pays a cameraman to record his daily activities as a “millionaire”
+      </div>
+    </div>
 
-      <a href="https://www.youtube.com/watch?v=oqQwZhliKR4" target="_blank">
-        <img src="Rosina.jpg" alt="Rosina Poster" class="poster">
+    <div class="poster-container">
+      <a href="https://youtu.be/w7c8KUtqwJg" target="_blank">
+        <img src="sixposter.jpeg" class="poster">
       </a>
-
-      <a href="#" target="_blank">
-        <img src="quaranteam.jpg" alt="Quaranteam Poster" class="poster">
-      </a>
+      <div class="desc">
+        Six Animation (2025): Short animation — Divorced, Beheaded, Died
+      </div>
     </div>
 
   </div>
+
+  <!-- BOTTOM ROW -->
+  <div class="bottom-row">
+
+    <div class="poster-container">
+      <a href="https://youtu.be/TuGxdEprqZ8" target="_blank">
+        <img src="pharmaka.jpeg" class="poster">
+      </a>
+      <div class="desc">
+        Pharmaka Commercial (2025): A commercial for ELA class inspired by Circe by Madeline Miller
+      </div>
+    </div>
+
+    <div class="poster-container">
+      <a href="https://www.youtube.com/watch?v=oqQwZhliKR4" target="_blank">
+        <img src="Rosina.jpg" class="poster">
+      </a>
+      <div class="desc">
+        Love Rosina (2026): Short experimental animation depicting the witch from Hansel and Gretel’s backstory
+      </div>
+    </div>
+
+    <div class="poster-container">
+      <a href="#" target="_blank">
+        <img src="quaranteam.jpg" class="poster">
+      </a>
+      <div class="desc">
+        Quaranteam (2020): Surviving the pandemic by forcing your friends to be part of a fake reality show trailer
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
 </body>
 </html>
