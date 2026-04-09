@@ -74,23 +74,15 @@
     }
 
     @media (max-width: 700px) {
-      .header-text {
-        font-size: 100px;
-      }
-      .subheader-text {
-        font-size: 80px;
-      }
+      .header-text { font-size: 100px; }
+      .subheader-text { font-size: 80px; }
       .poster-row, .bottom-row, .third-row {
         display: flex;
         flex-direction: column;
         gap: 30px;
       }
-      .poster-container {
-        max-width: 90%;
-      }
-      .desc {
-        font-size: 22px;
-      }
+      .poster-container { max-width: 90%; }
+      .desc { font-size: 22px; }
     }
   </style>
 </head>
@@ -133,7 +125,7 @@
 
   </div>
 
-  <!-- BOTTOM ROW (UNCHANGED) -->
+  <!-- BOTTOM ROW (unchanged) -->
   <div class="bottom-row">
 
     <div class="poster-container">
@@ -165,9 +157,11 @@
 
   </div>
 
-  <!-- THIRD ROW (ONLY SIX, directly under Pharmaka) -->
+  <!-- THIRD ROW (Six directly under Pharmaka, same size) -->
   <div class="third-row">
 
+    <div></div> <!-- empty spacer left -->
+    
     <div class="poster-container">
       <a href="https://youtu.be/w7c8KUtqwJg" target="_blank">
         <img src="sixposter.jpeg" class="poster">
@@ -176,6 +170,8 @@
         Six Animation (2025): Short animation — Divorced, Beheaded, Died
       </div>
     </div>
+
+    <div></div> <!-- empty spacer right -->
 
   </div>
 
