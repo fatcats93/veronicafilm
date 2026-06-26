@@ -1,179 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Film Page</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Film Page</title>
 
-    .container {
-      margin-top: 20px;
-      text-align: center;
-      padding-bottom: 200px;
-    }
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:#000;
+    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+}
 
-    .header-text {
-      font-size: 180px;
-      font-weight: bold;
-      margin: 0;
-      line-height: 1;
-    }
+.container{
+    margin-top:30px;
+    text-align:center;
+    padding:20px;
+    padding-bottom:220px;
+}
 
-    .subheader-text {
-      font-size: 140px;
-      font-weight: bold;
-      margin: 0;
-      margin-bottom: 50px;
-      line-height: 1;
-    }
+.header-text{
+    font-size:200px;
+    font-weight:bold;
+    margin:0;
+    line-height:.9;
+}
 
-    .poster-row, .bottom-row, .third-row {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      justify-content: center;
-      column-gap: 80px;
-      margin-top: 40px;
-    }
+.subheader-text{
+    font-size:155px;
+    font-weight:bold;
+    margin:0 0 70px;
+    line-height:.9;
+}
 
-    .poster-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 470px;
-    }
+.poster-row,
+.bottom-row,
+.third-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-items:center;
+    gap:70px;
+    max-width:1900px;
+    margin:70px auto 0;
+}
 
-    .poster {
-      width: 100%;
-      border-radius: 14px;
-      box-shadow: 0px 8px 30px rgba(0,0,0,0.45);
-      cursor: pointer;
-    }
+.poster-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    max-width:560px;
+}
 
-    .desc {
-      background-color: #fff;
-      color: #000;
-      padding: 25px;
-      margin-top: 16px;
-      border-radius: 10px;
-      font-size: 28px;
-      font-weight: bold;
-      text-align: center;
-      width: 100%;
-      min-height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
-    }
+.poster-wrapper{
+    position:relative;
+    width:100%;
+}
 
-    @media (max-width: 700px) {
-      .header-text { font-size: 100px; }
-      .subheader-text { font-size: 80px; }
-      .poster-row, .bottom-row, .third-row {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-      }
-      .poster-container { max-width: 90%; }
-      .desc { font-size: 22px; }
-    }
-  </style>
+.poster{
+    width:100%;
+    display:block;
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.5);
+    transition:.25s;
+}
+
+.poster:hover{
+    transform:scale(1.02);
+}
+
+.desc{
+    width:100%;
+    margin-top:20px;
+    background:white;
+    color:black;
+    border-radius:14px;
+    padding:30px;
+    box-sizing:border-box;
+    font-size:31px;
+    font-weight:bold;
+    line-height:1.35;
+    min-height:180px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+
+/* Festival ribbon */
+
+.ribbon{
+    position:absolute;
+    top:28px;
+    right:-70px;
+    background:#d4af37;
+    color:#000;
+    padding:12px 90px;
+    transform:rotate(35deg);
+    font-size:22px;
+    font-weight:bold;
+    box-shadow:0 4px 15px rgba(0,0,0,.45);
+    letter-spacing:.5px;
+}
+
+/* Tablets */
+
+@media(max-width:1200px){
+
+.header-text{
+    font-size:150px;
+}
+
+.subheader-text{
+    font-size:115px;
+}
+
+.poster-row,
+.bottom-row,
+.third-row{
+    grid-template-columns:repeat(2,1fr);
+    gap:50px;
+}
+
+.third-row{
+    grid-template-columns:1fr;
+}
+
+.third-row div:first-child,
+.third-row div:last-child{
+    display:none;
+}
+
+.poster-container{
+    max-width:500px;
+}
+
+.desc{
+    font-size:26px;
+}
+}
+
+/* Phones */
+
+@media(max-width:700px){
+
+.container{
+    padding:15px;
+}
+
+.header-text{
+    font-size:82px;
+}
+
+.subheader-text{
+    font-size:60px;
+    margin-bottom:35px;
+}
+
+.poster-row,
+.bottom-row,
+.third-row{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+    margin-top:35px;
+}
+
+.poster-container{
+    max-width:100%;
+}
+
+.desc{
+    font-size:22px;
+    padding:22px;
+    min-height:auto;
+}
+
+.ribbon{
+    top:18px;
+    right:-78px;
+    font-size:15px;
+    padding:8px 80px;
+}
+}
+
+</style>
 </head>
+
 <body>
 
 <div class="container">
-  <h1 class="header-text">FATCATS</h1>
-  <h2 class="subheader-text">STUDIOS</h2>
 
-  <!-- TOP ROW -->
-  <div class="poster-row">
+<h1 class="header-text">FATCATS</h1>
+<h2 class="subheader-text">STUDIOS</h2>
 
-    <div class="poster-container">
-      <a href="https://www.youtube.com/watch?v=mg8MOKGUxH4" target="_blank">
-        <img src="superzeros.jpeg" class="poster">
-      </a>
-      <div class="desc">
-        Superzeros (2025): Made with NYFA — two boys determined to be superheroes
-      </div>
-    </div>
+<!-- TOP ROW -->
 
-    <div class="poster-container">
-      <a href="https://youtu.be/9GQ9nFCIjoY" target="_blank">
-        <img src="maxdollar.jpeg" class="poster">
-      </a>
-      <div class="desc">
-        A Day in the Life of a Millionaire (2024): a bored kid pays a cameraman to record his daily activities as a “millionaire”
-      </div>
-    </div>
+<div class="poster-row">
 
-    <!-- DOG replaces Six -->
-    <div class="poster-container">
-      <a href="https://youtu.be/q1KOp5o2oH8" target="_blank">
-        <img src="guts.jpg" class="poster">
-      </a>
-      <div class="desc">
-        Hlbuert has a gut feeling that theres something wrong with his twin's new dog
-      </div>
-    </div>
+<div class="poster-container">
+<a href="https://www.youtube.com/watch?v=mg8MOKGUxH4" target="_blank">
+<div class="poster-wrapper">
+<img src="superzeros.jpeg" class="poster">
+</div>
+</a>
+<div class="desc">
+Superzeros (2025): Made with NYFA — two boys determined to be superheroes
+</div>
+</div>
 
-  </div>
+<div class="poster-container">
+<a href="https://youtu.be/9GQ9nFCIjoY" target="_blank">
+<div class="poster-wrapper">
+<img src="maxdollar.jpeg" class="poster">
+</div>
+</a>
+<div class="desc">
+A Day in the Life of a Millionaire (2024): a bored kid pays a cameraman to record his daily activities as a "millionaire"
+</div>
+</div>
 
-  <!-- BOTTOM ROW (unchanged) -->
-  <div class="bottom-row">
+<div class="poster-container">
+<a href="https://youtu.be/q1KOp5o2oH8" target="_blank">
+<div class="poster-wrapper">
+<img src="guts.jpg" class="poster">
+</div>
+</a>
+<div class="desc">
+Hlbuert has a gut feeling that there's something wrong with his twin's new dog
+</div>
+</div>
 
-    <div class="poster-container">
-      <a href="https://youtu.be/TuGxdEprqZ8" target="_blank">
-        <img src="pharmaka.jpeg" class="poster">
-      </a>
-      <div class="desc">
-        Pharmaka Commercial (2025): A commercial for ELA class inspired by Circe by Madeline Miller
-      </div>
-    </div>
+</div>
 
-    <div class="poster-container">
-      <a href="https://www.youtube.com/watch?v=oqQwZhliKR4" target="_blank">
-        <img src="Rosina.jpg" class="poster">
-      </a>
-      <div class="desc">
-        Love Rosina (2026): Short experimental animation depicting the witch from Hansel and Gretel’s backstory
-      </div>
-    </div>
+<!-- SECOND ROW -->
 
-    <div class="poster-container">
-      <a href="https://youtu.be/wPiIV6odskY" target="_blank">
-        <img src="quaranteam.jpg" class="poster">
-      </a>
-      <div class="desc">
-        Quaranteam (2020): Surviving the pandemic by forcing your friends to be part of a fake reality show trailer
-      </div>
-    </div>
+<div class="bottom-row">
 
-  </div>
+<div class="poster-container">
+<a href="https://youtu.be/TuGxdEprqZ8" target="_blank">
+<div class="poster-wrapper">
+<img src="pharmaka.jpeg" class="poster">
+</div>
+</a>
+<div class="desc">
+Pharmaka Commercial (2025): A commercial for ELA class inspired by <i>Circe</i> by Madeline Miller
+</div>
+</div>
 
-  <!-- THIRD ROW (Six directly under Pharmaka, same size) -->
-  <div class="third-row">
+<div class="poster-container">
+<a href="https://www.youtube.com/watch?v=oqQwZhliKR4" target="_blank">
 
-    <div></div> <!-- empty spacer left -->
-    
-    <div class="poster-container">
-      <a href="https://youtu.be/w7c8KUtqwJg" target="_blank">
-        <img src="sixposter.jpeg" class="poster">
-      </a>
-      <div class="desc">
-        Six Animation (2025): Short animation — Divorced, Beheaded, Died
-      </div>
-    </div>
+<div class="poster-wrapper">
 
-    <div></div> <!-- empty spacer right -->
+<div class="ribbon">
+★ Selected in Astoria Film Festival
+</div>
 
-  </div>
+<img src="Rosina.jpg" class="poster">
+
+</div>
+
+</a>
+
+<div class="desc">
+Love Rosina (2026): Short experimental animation depicting the witch from Hansel and Gretel's backstory
+</div>
+
+</div>
+
+<div class="poster-container">
+<a href="https://youtu.be/wPiIV6odskY" target="_blank">
+<div class="poster-wrapper">
+<img src="quaranteam.jpg" class="poster">
+</div>
+</a>
+<div class="desc">
+Quaranteam (2020): Surviving the pandemic by forcing your friends to be part of a fake reality show trailer
+</div>
+</div>
+
+</div>
+
+<!-- THIRD ROW -->
+
+<div class="third-row">
+
+<div></div>
+
+<div class="poster-container">
+<a href="https://youtu.be/w7c8KUtqwJg" target="_blank">
+<div class="poster-wrapper">
+<img src="sixposter.jpeg" class="poster">
+</div>
+</a>
+<div class="desc">
+Six Animation (2025): Short animation — Divorced, Beheaded, Died
+</div>
+</div>
+
+<div></div>
+
+</div>
 
 </div>
 
